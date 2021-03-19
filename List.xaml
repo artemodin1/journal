@@ -1,0 +1,34 @@
+﻿<Window x:Class="Journal.List"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="Обращение" Height="285.779" Width="500" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid HorizontalAlignment="Stretch" Height="90" VerticalAlignment="Top" Width="494" Margin="0,0,-0.4,0" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="labelHelp" Content="Причина обращения" FontSize="15" FontWeight="Bold" Margin="20,15,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.317,-1.285" Height="32" HorizontalAlignment="Left" Width="210"/>
+            <TextBox x:Name="textBoxHelp" Height="24" TextWrapping="Wrap" FontSize="15" Text="" Margin="20,60,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.506,-0.941" HorizontalAlignment="Left" Width="447"/>
+        </Grid>
+        <StackPanel HorizontalAlignment="Stretch" Height="90" Margin="0,90,-0.4,0" VerticalAlignment="Top" Width="494">
+            <Label x:Name="labelCabinet" Content="Номер кабинета" HorizontalAlignment="Left" FontSize="15" FontWeight="Bold" VerticalAlignment="Top" Margin="20,15,-0.4,0" RenderTransformOrigin="-2.317,-1.285" Height="32" Width="210"/>
+            <TextBox x:Name="textBoxCabinet" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" FontSize="15" Margin="20,15,0,0" VerticalAlignment="Top" Width="446" RenderTransformOrigin="-0.506,-0.941"/>
+        </StackPanel>
+        <Button x:Name="sendButton" Content="Отправить" HorizontalAlignment="Right" Margin="0,197,20,0" VerticalAlignment="Top" Width="144" Height="35" Click="Send_Message"/>
+        <Button x:Name="backButton" Content="Назад" HorizontalAlignment="Left" Margin="181,197,0,0" VerticalAlignment="Top" Width="144" Height="35" RenderTransformOrigin="0.419,0.557" Click="Back"/>
+
+    </Grid>
+</Window>

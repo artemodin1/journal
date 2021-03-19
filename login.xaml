@@ -1,0 +1,27 @@
+﻿<Window x:Class="Journal.login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Journal"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="Вход" Height="350" Width="500" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel Height="300" Width="300" Margin="0,0,0,0" KeyUp="Stack_KeyUp">
+            <Label x:Name="label" Content="Где вы находитесь?" Height="49" Margin="0,50,0,0" FontSize="24" HorizontalContentAlignment="Center"/>
+            <TextBox x:Name="number_cabinet" Height="32" TextWrapping="Wrap" Text="" HorizontalAlignment="Center"  FontSize="20" Width="196" Margin="52,10,52,0" RenderTransformOrigin="0.5,0.5"/>
+            <Button x:Name="button" Content="Войти" VerticalAlignment="Stretch" HorizontalAlignment="Center" Height="42" Margin="0,30,0,0" RenderTransformOrigin="0.122,0.373" Width="138" Click="Press" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="-1.819"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-0.498"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+        </StackPanel>
+
+    </Grid>
+</Window>
