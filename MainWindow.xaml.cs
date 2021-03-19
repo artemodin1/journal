@@ -30,13 +30,12 @@ namespace Journal
         public MainWindow()
         {
             InitializeComponent();
-            StreamReader reader_file = new StreamReader(file1); // создаем «потоковый читатель» и связываем его с файловым потоком
+            StreamReader reader_file = new StreamReader(file1);
             number_Cabinet = reader_file.ReadToEnd();
             if (number_Cabinet == "")
                 ToLogin();
             reader_file.Close();
             Room.Header = "Ваш кабинет: " + number_Cabinet;
-            //Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
             MySqlConnection conn = DBUtils.GetDBConnection();
             try
             {
@@ -46,18 +45,14 @@ namespace Journal
                 MySqlCommand command = new MySqlCommand(sql, conn);
                 MySqlDataReader reader = command.ExecuteReader();
                 int count = 0;
-               // var stackPanel = new ListBox { Orientation = Orientation.Vertical };
-                // читаем результат
                 while (reader.Read())
                 {
                     myPanel.Children.Add(new Label { Content = reader[1].ToString() + " | " + reader[3].ToString() + " | " + reader[4].ToString()});
-                   // myPanel.Children.Add(stackPanel);
                     count++;
                 }
                 if (count == 0) 
                 { 
-                    myPanel.Children.Add(new Label { Content = "Из заданного кабинета еще не поступало запросов"});
-                  //  myPanel.Children.Add(stackPanel);                    
+                    myPanel.Children.Add(new Label { Content = "Из заданного кабинета еще не поступало запросов"});                  
                 }
                 reader.Close();
 
