@@ -26,7 +26,7 @@ namespace Journal
         private static string number_Cabinet;
         public static string Number_Cabinet { get => number_Cabinet; set => number_Cabinet = value; }
 
-        FileStream file1 = new FileStream("Nickname.txt", FileMode.OpenOrCreate); //создаем файловый поток
+        FileStream file1 = new FileStream("Nickname.txt", FileMode.OpenOrCreate); 
         public MainWindow()
         {
             InitializeComponent();
